@@ -1,7 +1,7 @@
 import { employees } from "../data/dummyData";
 import TaskList from "../components/TaskList";
 import EmployeeChart from "../components/EmployeeChart";
-import Statistics from "../components/statistics";
+import Statistics from "../components/Statistics";
 import styles from "../assets/styles/Dashboard.module.css";
 const Dashboard = () => {
   return (
