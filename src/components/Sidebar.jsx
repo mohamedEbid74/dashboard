@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
+import styles from "../assets/styles/Sidebar.module.css"
 
 const Sidebar = () => {
   return (
-    <div className="bg-gray-100 w-64 h-screen p-4">
-      <h2 className="text-2xl font-bold mb-6">Menu</h2>
+    <div className={styles.sidebar}>
+      <h2 className="">Menu</h2>
       <ul>
         <li className="mb-4">
-          <Link to="/" className="text-blue-600 hover:underline">Dashboard</Link>
+          <Link to="/" className="">Dashboard</Link>
         </li>
         <li className="mb-4">
         <Link
           to="/employees"
-          className={`px-4 ${location.pathname === "/" ? "underline font-bold" : "hover:underline"}`}
+          className={` ${location.pathname === "/" ? "active" : ""}`}
         >
           All Employees
         </Link>        

@@ -1,15 +1,55 @@
-.mainContent{
+/* .mainContent{
     display: grid;
-    grid-template-columns: 250px 1fr; /* Sidebar width and content area */
-    gap: 20px; /* Space between the sidebar and content */
-    min-height: 100vh; /* Full viewport height */
+    grid-template-columns: 250px 1fr; 
+    gap: 20px; 
+    min-height: 100vh; 
 
-}
+} 
+*/
 .leftSide{
-    background-color: #fff; /* Light background for the sidebar */
-    padding: 20px;
+    background: linear-gradient(0deg, rgba(34,110,195,0.577468487394958) 0%, rgba(45,185,253,0.26934523809523814) 100%);
+    padding: 20px 0;
 }
 .content{
     background-color: #f4f4f4; /* White background for the content area */
   padding: 20px; 
 }
+/* Extra small devices (phones, less than 576px) */
+
+  /* Small devices (portrait tablets and large phones, 576px and up) */
+  @media (max-width: 767.98px) {
+    .leftSide{
+        display: none;
+    }  
+    
+}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px)  {
+    .mainContent{
+        display: grid;
+        grid-template-columns: 250px 1fr; /* Sidebar width and content area */
+        gap: 20px; /* Space between the sidebar and content */
+        min-height: 100vh; /* Full viewport height */
+    
+    }  
+    .leftSide{
+        background: linear-gradient(0deg, rgba(34,110,195,0.577468487394958) 0%, rgba(45,185,253,0.26934523809523814) 100%);
+        padding: 20px 0;
+    }}
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Styles for screens between 992px and 1199px */
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* Styles for screens 1200px and up */
+  }
+  
+  /* Ultra wide screens (large monitors, 1600px and up) */
+  @media (min-width: 1600px) {
+    /* Styles for screens 1600px and up */
+  }
+  

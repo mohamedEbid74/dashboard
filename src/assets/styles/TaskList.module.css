@@ -1,0 +1,36 @@
+.tabel{
+    width: 100%;
+}
+.tabel thead,
+.tabel tr{
+    text-align: center;
+    height: 40px;
+    font-size:clamp(0.688rem, 0.5781rem + 0.4687vw, 1rem);
+}
+.tabel thead{
+    background-color:#0242aa ;
+    color: #fff;
+}
+.tabel tbody tr{
+    background-color: #fff;
+}
+.green{
+    background-color: rgb(58, 128, 0);
+    border-radius: 20px;
+    color: #fff;
+}
+.blue{
+    background-color: #027aaa;
+    border-radius: 20px;
+    color: #fff;
+}
+.orange{
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    color: #fff;
+}
+.yellow{
+    background-color: rgb(105, 107, 0);
+    border-radius: 20px;
+    color: #fff;
+}

@@ -1,0 +1,68 @@
+.listDisc{
+    list-style: none;
+    display: grid;
+    gap: 20px;
+
+}
+.listDisc li{
+    background: radial-gradient(circle, rgba(71,158,255,0.87718837535014) 0%, rgba(148,187,233,0.8799894957983193) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15%;
+    gap: 10px;
+    border-radius: 10px;
+}
+.listDisc li img{
+    max-width: 80px;
+    border-radius: 50%;
+}
+.listDisc li a{
+    color: #000;
+    font-size: 24px;
+    border: none;
+}
+.listDisc li div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listDisc li div p {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.listDisc li div span{
+    color: #333;
+}
+
+@media (max-width: 599px) {
+    .listDisc{
+        grid-template-columns: repeat(1, 1fr); /* 4 items per row */
+    }  
+}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 600px)  {
+    .listDisc{
+        grid-template-columns: repeat(2, 1fr); /* 4 items per row */
+    } 
+}
+
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .listDisc{
+        grid-template-columns: repeat(2, 1fr); /* 4 items per row */
+    }  
+}
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .listDisc{
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    }   }
+  

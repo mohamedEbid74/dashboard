@@ -1,28 +1,33 @@
-import { Link } from "react-router-dom";
-import { employees } from "../data/dummyData"; // Assuming you're importing employee data
+import { useParams } from "react-router-dom"; 
+import { employees } from "../data/dummyData"; 
+import styles from "../assets/styles/EmployeeDetails.module.css";
 
 const EmployeeDetails = () => {
+  const { id } = useParams();
+
+  const employee = employees.find(emp => emp.id === parseInt(id));
+
+  if (!employee) {
+    return <p>Employee not found!</p>;
+  }
+
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Employee List</h1>
-      <table className="w-full border-collapse border border-gray-300">
+    <div className="">
+      <h1>{employee.name} Task List</h1>
+      <table className={styles.tabel}>
         <thead>
           <tr>
-            <th className="border border-gray-300 p-2">Employee Name</th>
-            <th className="border border-gray-300 p-2">Task Count</th>
-            <th className="border border-gray-300 p-2">Action</th>
+            <th className="">Task Name</th>
+            <th className="">Task Priority</th>
+            <th className="">Task Status</th>
           </tr>
         </thead>
         <tbody>
-          {employees.map((employee) => (
-            <tr key={employee.id}>
-              <td className="border border-gray-300 p-2">{employee.name}</td>
-              <td className="border border-gray-300 p-2">{employee.tasks.length}</td>
-              <td className="border border-gray-300 p-2">
-                <Link to={`/employee/${employee.id}`} className="text-blue-600 hover:underline">
-                  View Tasks
-                </Link>
-              </td>
+          {employee.tasks.map((task) => (
+            <tr key={`${employee.id}-${task.id}`}>
+              <td>{task.name}</td>
+              <td>{task.priority}</td>
+              <td>{task.status}</td>
             </tr>
           ))}
         </tbody>
@@ -31,4 +36,4 @@ const EmployeeDetails = () => {
   );
 };
 
-export default EmployeeDetails ;
+export default EmployeeDetails;

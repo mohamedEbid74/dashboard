@@ -1,0 +1,16 @@
+.sidebar h2{
+    text-align: center;
+    width: 100%;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px 5px;
+    background: linear-gradient(90deg, rgba(0,94,222,0.5578606442577031) 0%, rgba(88,236,229,0.5578606442577031) 100%);
+    border-bottom: 1px solid #eee;
+}
+.sidebar ul li a {
+    color: #000;
+}
