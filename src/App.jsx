@@ -6,7 +6,19 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import styles from "./assets/styles/App.module.css";
 import EmployeeDetails from "./components/EmployeeDetails";
+import  { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 const App = () => {
+  const { i18n } = useTranslation();
+
+  // Change direction based on language
+  useEffect(() => {
+    const htmlTag = document.documentElement;
+    htmlTag.lang = i18n.language; // Set lang attribute
+    htmlTag.dir = i18n.language === "ar" ? "rtl" : "ltr"; // Set direction
+  }, [i18n.language]);
+  
   return (
     <Router>
       <Navbar />

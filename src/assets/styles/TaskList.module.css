@@ -34,3 +34,55 @@
     border-radius: 20px;
     color: #fff;
 }
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex button{
+    background-color: #0242aa;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup{
+    background-color: rgba(0, 119, 255, 0.445);
+    padding: 20px;
+    margin: 10px 0;
+
+}
+.popupContent{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+
+}
+.inputs input{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    height: 20px;
+    margin-right: 20px;
+    padding: 8px;
+}
+.btn button{
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn button:first-of-type{
+    background-color: rgb(1, 78, 49);
+    color: #fff;
+}
+.btn button:last-of-type{
+    background-color: rgb(104, 0, 0);
+    color: #fff;
+}

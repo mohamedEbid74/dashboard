@@ -3,9 +3,13 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import PropTypes from "prop-types";
 import AverageWorkHoursCard from "./AverageWorkHoursCard ";
 import styles from "../assets/styles/EmployeeChart.module.css";
+import { useTranslation } from "react-i18next";
+
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const EmployeeChart = ({ employees }) => {
+  const {t} = useTranslation();
   // Extract employee names
   const employeeNames = employees.map((emp) => emp.name);
 
@@ -35,12 +39,12 @@ const EmployeeChart = ({ employees }) => {
     labels: employeeNames,
     datasets: [
       {
-        label: "Completed Tasks",
+        label: `${t("complatedTaskes")}`,
         data: completedTasks,
         backgroundColor: "rgba(75, 192, 192, 0.5)",
       },
       {
-        label: "Delayed Tasks",
+        label: `${t("delatedTasks")}`,
         data: delayedTasks,
         backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
@@ -65,7 +69,7 @@ const EmployeeChart = ({ employees }) => {
   return (
     <div className={styles.allCharts}>
       <div className={styles.leftSide}>
-        <h2 className="text-xl font-bold mb-4">Task Statistics</h2>
+        <h2 className="text-xl font-bold mb-4">{t("tasks")}</h2>
         <Bar data={data} options={options} />
       </div>
 

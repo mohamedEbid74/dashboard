@@ -1,0 +1,19 @@
+body[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    text-align: left; /* Default */
+  }
+  
+  body[lang="ar"] th, body[lang="ar"] td {
+    text-align: right;
+  }

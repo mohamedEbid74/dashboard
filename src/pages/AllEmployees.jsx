@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "../assets/styles/AllEmployees .module.css"
+import { useTranslation } from "react-i18next";
 
 const AllEmployees = ({ employees }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="">
-      <h2 className="">All Employees</h2>
+      <h2 className="">{t("employees")}</h2>
       <ul className={styles.listDisc}>
         {employees.map((employee) => (
              <Link key={employee.id} to={`/employee/${employee.id}`} className="">
@@ -16,9 +19,9 @@ const AllEmployees = ({ employees }) => {
                     </Link>
                     <div>
                       <Link to={`/employee/${employee.id}`} className="">
-                        <p>View Tasks</p>  
+                        <p>{t("View_Tasks")}</p>  
                       </Link>
-                      <span>{employee.tasks.length} tasks</span>
+                      <span>{employee.tasks.length} {t("Taskf")}</span>
                     </div>
               </li>
             </Link>

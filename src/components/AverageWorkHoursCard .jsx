@@ -1,10 +1,13 @@
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import PropTypes from 'prop-types';
+import { useTranslation } from "react-i18next";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const AverageWorkHoursCard = ({ averageWorkHours, employeeNames }) => {
+  const {t} = useTranslation();
   // Data for the pie chart
   const data = {
     labels: employeeNames,
@@ -39,7 +42,7 @@ const AverageWorkHoursCard = ({ averageWorkHours, employeeNames }) => {
 
   return (
     <div className="p-4 bg-white shadow rounded mb-4">
-      <h3 className="text-xl font-bold mb-4">Average Work Hours per Employee</h3>
+      <h3 className="text-xl font-bold mb-4">{t("averageHours")}</h3>
       <Pie data={data} options={options} />
     </div>
   );
