@@ -1,10 +1,10 @@
 .allCharts{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin: 40px 0;
     gap: 20px;
+    width: 100%;
 }
 .leftSide,
 .rightSide{
@@ -12,4 +12,12 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .allCharts{
+        flex-direction: column;
+        align-items: center;
+
+    }
 }

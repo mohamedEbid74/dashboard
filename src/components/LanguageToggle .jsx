@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import styles from "../assets/styles/LanguageToggle .module.css"
 
 const LanguageToggle = () => {
   const { i18n } = useTranslation();
@@ -9,7 +10,7 @@ const LanguageToggle = () => {
   };
 
   return (
-    <button onClick={toggleLanguage}>
+    <button onClick={toggleLanguage} className={styles.btn}>
       {i18n.language === "en" ? "العربية" : "English"}
     </button>
   );

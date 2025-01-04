@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import styles from "../assets/styles/Navbar.module.css";
 import { useTranslation } from "react-i18next";
-
+import LanguageToggle from "./LanguageToggle ";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -34,6 +34,8 @@ const Navbar = () => {
         >
           {t("employees")}
         </Link>
+        <LanguageToggle />
+
       </div>
     </nav>
   );
